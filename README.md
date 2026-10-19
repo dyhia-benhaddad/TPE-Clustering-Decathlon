@@ -84,11 +84,11 @@ Les principaux enseignements sont les suivants :
 
 - Selon la règle de Kaiser (valeur propre supérieure à 1), quatre composantes sont retenues. Elles expliquent **74,71 % de la variance totale**.
 - Les deux premiers axes expliquent **50,09 % de la variance** et servent à visualiser les observations dans un plan factoriel.
-- L’axe 1 est principalement associé au niveau de performance général, sous réserve du sens des contributions des variables, notamment celles des épreuves chronométrées.
-- L’axe 2 traduit des différences de profils de performance et de spécialisation entre disciplines.
-- Le plan factoriel ne fait pas apparaître de séparation nette entre les athlètes selon leur compétition d’origine (Jeux olympiques ou Decastar).
+- L'axe 1 traduit le **niveau de performance global**. Il est corrélé négativement aux courses de vitesse (100 m : −0,77 ; 110 m haies : −0,75 ; 400 m : −0,68) et positivement à la longueur (0,74), au poids (0,62), à la hauteur (0,57) et au disque (0,55). Comme un temps faible correspond à une bonne performance, les athlètes situés à droite de l'axe sont à la fois rapides et performants en saut et en lancer.
+- L'axe 2 distingue des **profils de spécialisation**. Il est surtout lié au disque (0,61), au poids (0,60), au 400 m (0,57) et au 1 500 m (0,47).
+- Le plan factoriel ne fait pas apparaître de séparation nette entre les athlètes selon leur compétition d'origine (Jeux olympiques ou Decastar).
 
-L’interprétation précise des axes dépend des contributions et des coordonnées des variables sur les axes factoriels.
+
 
 ### 4.2. Comparaison des classifications
 
@@ -99,7 +99,6 @@ L’interprétation précise des axes dépend des contributions et des coordonn�
 | DBSCAN | Dix variables standardisées | MinPts = 4 ; ε testé de 2,5 à 4,0 | Un seul groupe pour les valeurs testées | — |
 | DBSCAN | Plan des deux premiers axes de l’ACP | ε = 1,5 ; MinPts = 3 | Trois groupes de 3, 32 et 3 athlètes, plus 3 points de bruit | 0,291, hors bruit |
 
-Les paramètres et les résultats présentés correspondent aux analyses décrites dans le rapport du projet.
 
 ### 4.3. Indicateurs complémentaires
 
@@ -120,7 +119,7 @@ Ces valeurs décrivent le lien entre l’appartenance aux groupes et les coordon
 
 ### Principaux enseignements
 
-- Les résultats présentés dans le rapport font ressortir un groupe de trois athlètes olympiques — **Sebrle, Clay et Karpov** — associé à un niveau de performance élevé.
+- Les trois méthodes isolent le même groupe de trois athlètes olympiques — Sebrle, Clay et Karpov —, significativement au-dessus de la moyenne dans la plupart des disciplines.
 - La CAH et K-means produisent des partitions différentes pour les autres athlètes. K-means distingue notamment un groupe associé à de bonnes performances au saut à la perche.
 - Les valeurs de η² montrent que les classes de la CAH et de K-means sont fortement liées au premier axe de l’ACP, particulièrement pour K-means.
 - DBSCAN, appliqué au plan des deux premiers axes de l’ACP, identifie trois observations atypiques — Warners, Drews et Casarsa — comme points de bruit.
@@ -207,7 +206,7 @@ source("USArrests.R")
 
 Les scripts permettent de reproduire les analyses et de consulter les résultats ainsi que les graphiques. Une exécution ligne par ligne dans RStudio facilite le suivi des différentes étapes.
 
-*Remarque : les commandes ci-dessus supposent que les noms des fichiers et leurs dépendances correspondent bien à la structure du dépôt. L’exécution indépendante de chaque script doit être vérifiée avant publication.*
+
 
 ## 9. Compétences mobilisées
 
